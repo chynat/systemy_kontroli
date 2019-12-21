@@ -40,7 +40,7 @@ def menu():
         print('Count in text file :', num_of_char)
     elif choice==4:
         try:
-            #instructions
+            #inst
         except FileNotFoundError:
             print("Something goes wrong, download file again")
     elif choice==5:
