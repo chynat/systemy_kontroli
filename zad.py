@@ -6,9 +6,10 @@ def menu():
     print("2. Zlicz liczbę liter w pobranym pliku ")
     print("3. Zlicz liczbę wyrazów w pliku ")
     print("4. Zlicz liczbę znaków interpunkcyjnych w pliku ")
-    print("5. Wygeneruj raport o użyciu liter (A-Z) ")
-    print("6. Zapisz statystyki z punktów 2-5 do pliku statystyki.txt ")
-    print("7. Wyjście z programu ")
+    print("5. Zlicz liczbę zdań w pliku")
+    print("6. Wygeneruj raport o użyciu liter (A-Z) ")
+    print("7. Zapisz statystyki z punktów 2-5 do pliku statystyki.txt ")
+    print("8. Wyjście z programu ")
     choice= int(input("Enter choice: "))
     if choice==1:
         url = "http://s3.zylowski.net/public/input/5.txt"
@@ -28,14 +29,30 @@ def menu():
         print('Count in text file :', num_of_char)
 
     elif choice==3:
-        print("3")
+        plik = open('file.txt')
+        try:
+            tekst = plik.read()
+        finally:
+            plik.close()
+
+        data = tekst.split(" ")
+        num_of_char = len(data)
+        print('Count in text file :', num_of_char)
     elif choice==4:
         try:
             #instructions
         except FileNotFoundError:
             print("Something goes wrong, download file again")
     elif choice==5:
-        print("5")
+        plik = open('file.txt')
+        try:
+            tekst = plik.read()
+        finally:
+            plik.close()
+
+        data = tekst.split(".")
+        num_of_char = len(data)
+        print('Count in text file :', num_of_char)
     elif choice==6:
         print("6")
     elif choice==7:
