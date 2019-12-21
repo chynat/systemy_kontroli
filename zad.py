@@ -14,13 +14,15 @@ def menu():
         try:
             file = open("C:\data.txt", "r")
             cont = file.read()
+
+            #sobota
     elif choice==2:
         print("")
     elif choice==3:
         print("3")
     elif choice==4:
         try:
-            punc()
+            #instructions
         except FileNotFoundError:
             print("Something goes wrong, download file again")
     elif choice==5:
