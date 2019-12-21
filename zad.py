@@ -56,9 +56,13 @@ def menu():
         print("6")
     elif choice==7:
         print("7")
+    elif choice==8:
+        print("8")
         exit()
+
     else:
         print("Invalid choice")
+
     menu()
 
 menu()
