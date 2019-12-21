@@ -1,21 +1,28 @@
+from collections import Counter
+
 def menu():
     print("Menu:")
     print("1")
     print("2")
     print("3")
-    print("4")
+    print("4. ")
     print("5")
     print("6")
     print("7")
     choice= int(input("Enter choice: "))
     if choice==1:
-        print("one")
+        try:
+            file = open("C:\data.txt", "r")
+            cont = file.read()
     elif choice==2:
-        print("2")
+        print("")
     elif choice==3:
         print("3")
     elif choice==4:
-        print("4")
+        try:
+            punc()
+        except FileNotFoundError:
+            print("Something goes wrong, download file again")
     elif choice==5:
         print("5")
     elif choice==6:
@@ -26,4 +33,5 @@ def menu():
     else:
         print("Invalid choice")
     menu()
+
 menu()
