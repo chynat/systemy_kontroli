@@ -53,7 +53,11 @@ def menu():
         num_of_char = len(data)
         print('Count in text file :', num_of_char)
     elif choice==6:
-        print("6")
+        plik = open('file.txt')
+        freq = {}
+        for c in plik:
+            freq[c] = plik.count(c)
+        return freq
     elif choice==7:
         print("7")
     elif choice==8:
