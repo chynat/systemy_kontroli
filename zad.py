@@ -1,4 +1,5 @@
 from collections import Counter
+import requests
 
 def menu():
     print("1. Pobierz plik z internetu ")
@@ -10,13 +11,22 @@ def menu():
     print("7. Wyjście z programu ")
     choice= int(input("Enter choice: "))
     if choice==1:
-        try:
-            file = open("C:\data.txt", "r")
-            cont = file.read()
-
-            #sobota
+        url = "http://s3.zylowski.net/public/input/5.txt"
+        r = requests.get(url)
+        with open('file.txt', 'w') as file:
+                file.write(r.text)
     elif choice==2:
-        print("")
+
+        plik = open('file.txt')
+        try:
+            tekst = plik.read()
+        finally:
+            plik.close()
+
+        data = tekst.split(" ")
+        num_of_char = len(data)
+        print('Count in text file :', num_of_char)
+
     elif choice==3:
         print("3")
     elif choice==4:
