@@ -24,8 +24,7 @@ def menu():
         finally:
             plik.close()
 
-        data = tekst.split(" ")
-        num_of_char = len(data)
+        num_of_char = len(tekst)
         print('Count in text file :', num_of_char)
 
     elif choice==3:
