@@ -1,14 +1,13 @@
 from collections import Counter
 
 def menu():
-    print("Menu:")
-    print("1")
-    print("2")
-    print("3")
-    print("4. ")
-    print("5")
-    print("6")
-    print("7")
+    print("1. Pobierz plik z internetu ")
+    print("2. Zlicz liczbę liter w pobranym pliku ")
+    print("3. Zlicz liczbę wyrazów w pliku ")
+    print("4. Zlicz liczbę znaków interpunkcyjnych w pliku ")
+    print("5. Wygeneruj raport o użyciu liter (A-Z) ")
+    print("6. Zapisz statystyki z punktów 2-5 do pliku statystyki.txt ")
+    print("7. Wyjście z programu ")
     choice= int(input("Enter choice: "))
     if choice==1:
         try:
